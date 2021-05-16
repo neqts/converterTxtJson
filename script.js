@@ -26,7 +26,7 @@ overall.classList.add('overall');
 main.appendChild(overall);
 overall.style.cssText = `
 width:60%;
-height:300px;
+height:50vh;
 background:#ffffffad;
 
 `;
@@ -97,6 +97,7 @@ text.classList.add('text');
 text.placeholder = 'Type your text here...';
 text.style.cssText = `
 width:80%;
+height:15vh;
 background:#fff;
 border:none;
 margin:20px
@@ -148,7 +149,9 @@ const paragrafChangeLean = function () {
   li.style.fontStyle = 'Italic';
 };
 
-const paragrafSave = function () {};
+const paragrafSave = function () {
+  console.log(JSON.stringify(outputText.innerHTML));
+};
 
 bullet.addEventListener('click', paragraChangePoint);
 lean.addEventListener('click', paragrafChangeLean);
